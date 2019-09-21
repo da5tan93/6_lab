@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block author %}{{ visitor.author}}{% endblock %}
+{% block menu %}
+    <li><a href="{% url 'visitor_update' visitor.pk %}">Edit</a></li>
+    <li><a href="{% url 'visitor_delete' visitor.pk %}">Delete</a></li>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="card mb-3">
+            <h2 class="card-title">{{ visitor.author }} {{ visitor.email }} </h2>
+            <p class="card-text"><div class="pre">{{ visitor.text }}</div></p>
+            <p class="card-text"><small class="text-muted">>Created by  at <b>{{ visitor.created_at }}</b></small></p>
+            <p>{{ visitor.status }}</p>
+        </div>
+    </div>
+{% endblock %}
+
+

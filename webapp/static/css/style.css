@@ -1,0 +1,65 @@
+body {
+    background: lightcyan;
+    color: #222222;
+    font-family: 'Istok Web', sans-serif;
+    margin-top: 60px;
+}
+
+h1 {
+    text-align: center;
+}
+.header{
+	background-color: #775ba3;
+}
+.header .nav-link{
+	font-size: 14px;
+}
+
+.menu {
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: #fffee8;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 15px;
+}
+.imago a {
+    font-size: 2em;
+}
+
+.menu a:hover {
+    color: #ffc122;
+    text-decoration: underline;
+}
+.cent {
+    padding: 3em;
+}
+.pre {
+    white-space: pre-wrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-error {
+    color: red;
+    font-size: 12px;
+    margin: 5px 0 0 0
+}
+
+.field-error {
+    border: solid 1px red;
+    box-shadow: red 0 0 3px;
+}

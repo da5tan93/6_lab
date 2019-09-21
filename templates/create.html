@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Visitor{% endblock %}
+
+{% block content %}
+    <h1>Create Visitor</h1>
+    <form method="POST" action="{% url 'visitor_add' %}">
+        {% include 'partial/visitor_form.html' with button_text="Create" %}
+    </form>
+{% endblock %}

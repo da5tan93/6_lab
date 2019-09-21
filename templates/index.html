@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <li><a href="{% url 'visitor_add' %}">Add Visitor</a></li>
+{% endblock %}
+
+{% block content %}
+    <h1>Visitors</h1>
+    <hr/>
+    {% for visitor in visitors %}
+        <div class="container card mb-3">
+            <div class="row">
+                <div class="col">
+                   <h2 class="card-title">{{ visitor.author }} ({{ visitor.email }}) </h2>
+                </div>
+                <div class="col">
+                    <p>{{ visitor.status }}</p>
+                </div>
+                <div class="imago col col-md-auto">
+                    <a href={% url 'visitor_update' visitor.pk %}><i class="fas fa-edit"></i></a>
+                    <a href="{% url 'visitor_delete' visitor.pk %}"><i class="fas fa-eraser"></i></a>
+                </div>
+            </div>
+            <p class="card-text"><div class="pre">{{ visitor.text }}</div></p>
+            <p class="card-text"><small class="text-muted">>Created by  at <b>{{ visitor.created_at }}</b></small></p>
+        </div>
+        <hr/>
+    {% endfor %}
+{% endblock %}
